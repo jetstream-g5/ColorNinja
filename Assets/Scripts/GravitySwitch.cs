@@ -7,8 +7,7 @@ public class GravitySwitch : MonoBehaviour
     private Rigidbody rb;
     private int Gravity = 10;
     private bool isUp;
-    private bool inAir = false;
-
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();

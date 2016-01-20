@@ -8,7 +8,7 @@ public class PlayerColor : MonoBehaviour {
     [SerializeField]
     private Color _blue;
 
-    private bool _toggle = true;
+    public bool _isBlue = true;
 
     private Renderer _renderer;
 
@@ -29,15 +29,15 @@ public class PlayerColor : MonoBehaviour {
 
     void ToggleColor()
     {
-        _toggle = !_toggle;
+        _isBlue = !_isBlue;
 
-        if (_toggle)
-        {
-            _renderer.material.color = _orange;
-        }
-        else
+        if (_isBlue == true)
         {
             _renderer.material.color = _blue;
+        }
+        if(_isBlue == false)
+        {
+            _renderer.material.color = _orange;
         }
     }
 }
